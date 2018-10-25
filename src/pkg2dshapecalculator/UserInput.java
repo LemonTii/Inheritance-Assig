@@ -55,7 +55,7 @@ public class UserInput {
         check = true;
         while (check == true) {
             System.out.println("Pick the shape you would like (by their corresponding number) \n "
-                + "1. Triangle \n 2. Rectangle \n 3. Circles \n 4. Trapezoids");
+                + "1. Triangle \n 2. Rectangle \n 3. Circle \n 4. Trapezoid");
             shape = reader.next();
             switch (shape) {
                 case "1": asker.Input1();
@@ -88,7 +88,7 @@ public class UserInput {
         check = true;
         
         while (check == true){
-            System.out.print("What would you like (type the corresponding number) \n 1. Area \n 2. Perimeter");
+            System.out.println("What would you like (type the corresponding number) \n 1. Area \n 2. Perimeter");
             value = reader.next();
             switch (value) {
                 case "1":
@@ -113,15 +113,15 @@ public class UserInput {
         Rectangle rect = new Rectangle(h, b);
         check = true;
         while (check == true){
-            System.out.print("What would you like (type the corresponding number) \n 1. Area \n 2. Perimeter");
+            System.out.println("What would you like (type the corresponding number) \n 1. Area \n 2. Perimeter");
             value = reader.next();
             switch (value) {
                 case "1":
-                    System.out.println("The area of this triangle is: " + rect.getArea());
+                    System.out.println("The area of this rectangle is: " + rect.getArea());
                     check = false;
                     break;
                 case "2":
-                    System.out.println("The perimeter of this triangle is: " + rect.getPerimeter());
+                    System.out.println("The perimeter of this rectangle is: " + rect.getPerimeter());
                     check = false;
                     break;
                 default:
@@ -136,15 +136,15 @@ public class UserInput {
         Circle crcl = new Circle(h);
         check = true;
         while (check == true){
-            System.out.print("What would you like (type the corresponding number) \n 1. Area \n 2. Perimeter");
+            System.out.println("What would you like (type the corresponding number) \n 1. Area \n 2. Circumference");
             value = reader.next();
             switch (value) {
                 case "1":
-                    System.out.println("The area of this triangle is: " + crcl.getArea());
+                    System.out.println("The area of this circle is: " + crcl.getArea());
                     check = false;
                     break;
                 case "2":
-                    System.out.println("The perimeter of this triangle is: " + crcl.getPerimeter());
+                    System.out.println("The perimeter of this circle is: " + crcl.getPerimeter());
                     check = false;
                     break;
                 default:
@@ -168,15 +168,15 @@ public class UserInput {
         check = true;
         
         while (check == true){
-            System.out.print("What would you like (type the corresponding number) \n 1. Area \n 2. Perimeter");
+            System.out.println("What would you like (type the corresponding number) \n 1. Area \n 2. Perimeter");
             value = reader.next();
             switch (value) {
                 case "1":
-                    System.out.println("The area of this triangle is: " + trap.getArea());
+                    System.out.println("The area of this trapezoid is: " + trap.getArea());
                     check = false;
                     break;
                 case "2":
-                    System.out.println("The perimeter of this triangle is: " + trap.getPerimeter());
+                    System.out.println("The perimeter of this trapezoid is: " + trap.getPerimeter());
                     check = false;
                     break;
                 default:
