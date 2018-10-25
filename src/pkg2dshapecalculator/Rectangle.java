@@ -19,6 +19,7 @@ public class Rectangle extends Calculation {
         height = h;
         base = b;
     }
+    
     @Override
     public double getArea() {
         return height * base;
