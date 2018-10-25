@@ -9,19 +9,23 @@ package pkg2dshapecalculator;
  *
  * @author EricaSojeong
  */
-public class Circle extends UserInput {
+public class Circle extends Calculation {
     public Circle(){
-    
+    height = 0;
 }
     
+    public Circle(double h){
+        height = h;
+    }
+
     @Override
     public double getArea() {
-        return Math.PI * getH() * getH();
+        return Math.PI * height * height;
     }
 
     @Override
     public double getPerimeter() {
-        return 2 * Math.PI * getH();
+        return 2 * Math.PI * height;
     }
     
 }

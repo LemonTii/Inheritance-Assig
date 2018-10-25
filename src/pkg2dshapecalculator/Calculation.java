@@ -5,18 +5,13 @@
  */
 package pkg2dshapecalculator;
 
-import java.util.Scanner;
-
 /**
  *
  * @author EricaSojeong
  */
-public class Main {
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        UserInput in = new UserInput();
-        in.Callup();
-    }
+public abstract class Calculation {
+    public double height, base, base2, side, side2;
+    
+    public abstract double getArea();
+    public abstract double getPerimeter();
 }

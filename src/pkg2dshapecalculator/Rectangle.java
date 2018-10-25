@@ -9,19 +9,24 @@ package pkg2dshapecalculator;
  *
  * @author EricaSojeong
  */
-public class Rectangle extends UserInput {
+public class Rectangle extends Calculation {
     public Rectangle(){
-        
+        height = 0;
+        base = 0;
     }
 
+    public Rectangle(double h, double b){
+        height = h;
+        base = b;
+    }
     @Override
     public double getArea() {
-        return getB()*getH();
+        return height * base;
     }
 
     @Override
     public double getPerimeter() {
-        return (getB()*2) + (getH()*2);
+        return 2 * (height + base);
     }
     
 }
