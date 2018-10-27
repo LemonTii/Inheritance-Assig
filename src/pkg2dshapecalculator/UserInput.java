@@ -6,41 +6,25 @@
 package pkg2dshapecalculator;
 
 import java.util.Scanner;
+import java.text.DecimalFormat;
+
 
 /**
  *
  * @author EricaSojeong
  */
 public class UserInput {
-    String value, choice, shape;
+    String shape;
     Boolean check;
     Scanner reader = new Scanner(System.in);
-    
-//    public UserInput(){
-//        base = 0;
-//        base2 = 0;
-//        height = 0;
-//        side = 0;
-//        side2 = 0;
-//        shape = null;
-//    }
-//    
-//    public UserInput(double b, double b2, double h, double s, double s2, String shp){
-//        base = b;
-//        base2 = b2;
-//        height = h;
-//        side = s;
-//        side2 = s2;
-//        shape = shp;
-//    }
-    
+  
     public void Callup(){
         UserInput in = new UserInput();
         in.AskUser();
         do {
             System.out.print("Type \"1\" to Choose different shape. Type in anything else to quit: ");
-            choice = reader.next();
-            if (choice.equalsIgnoreCase("1")){
+            shape = reader.next();
+            if (shape.equalsIgnoreCase("1")){
                 in.AskUser();
             }
             else {
@@ -84,25 +68,13 @@ public class UserInput {
         double sl = reader.nextDouble();
         System.out.print("Type in the other side lenght: ");
         double sl2 = reader.nextDouble();
-        Triangle tri = new Triangle(h, b, sl, sl2);
-        check = true;
         
-        while (check == true){
-            System.out.println("What would you like (type the corresponding number) \n 1. Area \n 2. Perimeter");
-            value = reader.next();
-            switch (value) {
-                case "1":
-                    System.out.println("The area of this triangle is: " + tri.getArea());
-                    check = false;
-                    break;
-                case "2":
-                    System.out.println("The perimeter of this triangle is: " + tri.getPerimeter());
-                    check = false;
-                    break;
-                default:
-                    System.out.println("Invalid input please try again");
-            }
-        }
+        Triangle tri = new Triangle(h, b, sl, sl2);
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        
+        System.out.println("The area of this triangle is: " + df.format(tri.getArea()));
+        System.out.println("The perimeter of this triangle is: " + df.format(tri.getPerimeter()));
     }
     
     public void Input2(){
@@ -110,47 +82,24 @@ public class UserInput {
         double h = reader.nextDouble();
         System.out.print("Type in the width: ");
         double b = reader.nextDouble();
+        
         Rectangle rect = new Rectangle(h, b);
-        check = true;
-        while (check == true){
-            System.out.println("What would you like (type the corresponding number) \n 1. Area \n 2. Perimeter");
-            value = reader.next();
-            switch (value) {
-                case "1":
-                    System.out.println("The area of this rectangle is: " + rect.getArea());
-                    check = false;
-                    break;
-                case "2":
-                    System.out.println("The perimeter of this rectangle is: " + rect.getPerimeter());
-                    check = false;
-                    break;
-                default:
-                    System.out.println("Invalid input please try again");
-            }
-        }
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        
+        System.out.println("The area of this rectangle is: " + df.format(rect.getArea()));
+        System.out.println("The perimeter of this rectangle is: " + df.format(rect.getPerimeter()));
     }
     
     public void Input3(){
         System.out.print("Type in the radius: ");
         double h = reader.nextDouble();
+        
         Circle crcl = new Circle(h);
-        check = true;
-        while (check == true){
-            System.out.println("What would you like (type the corresponding number) \n 1. Area \n 2. Circumference");
-            value = reader.next();
-            switch (value) {
-                case "1":
-                    System.out.println("The area of this circle is: " + crcl.getArea());
-                    check = false;
-                    break;
-                case "2":
-                    System.out.println("The perimeter of this circle is: " + crcl.getPerimeter());
-                    check = false;
-                    break;
-                default:
-                    System.out.println("Invalid input please try again");
-            }
-        }
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        System.out.println("The area of this circle is: " + df.format(crcl.getArea()));
+        System.out.println("The circumference of this circle is: " + df.format(crcl.getPerimeter()));
     }
     
     public void Input4(){
@@ -164,26 +113,13 @@ public class UserInput {
         double sl = reader.nextDouble();
         System.out.print("Type in the other side lenght: ");
         double sl2 = reader.nextDouble();
-        Trapezoid trap = new Trapezoid(h, b, b2, sl, sl2);
-        check = true;
         
-        while (check == true){
-            System.out.println("What would you like (type the corresponding number) \n 1. Area \n 2. Perimeter");
-            value = reader.next();
-            switch (value) {
-                case "1":
-                    System.out.println("The area of this trapezoid is: " + trap.getArea());
-                    check = false;
-                    break;
-                case "2":
-                    System.out.println("The perimeter of this trapezoid is: " + trap.getPerimeter());
-                    check = false;
-                    break;
-                default:
-                    System.out.println("Invalid input please try again");
-            }
-        }
-    }
+        Trapezoid trap = new Trapezoid(h, b, b2, sl, sl2);
+        DecimalFormat df = new DecimalFormat("#.##");
 
+        
+        System.out.println("The area of this trapezoid is: " + df.format(trap.getArea()));
+        System.out.println("The perimeter of this trapezoid is: " + df.format(trap.getPerimeter()));
+    }
 }
 
