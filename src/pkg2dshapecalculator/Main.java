@@ -5,8 +5,6 @@
  */
 package pkg2dshapecalculator;
 
-import java.util.Scanner;
-
 /**
  *
  * @author EricaSojeong
