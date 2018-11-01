@@ -17,6 +17,7 @@ public class UserInput {
     String shape;
     Boolean check;
     Scanner reader = new Scanner(System.in);
+    DecimalFormat df = new DecimalFormat("#.##");
   
     public void Callup(){
         UserInput in = new UserInput();
@@ -70,8 +71,6 @@ public class UserInput {
         double sl2 = reader.nextDouble();
         
         Triangle tri = new Triangle(h, b, sl, sl2);
-        DecimalFormat df = new DecimalFormat("#.##");
-
         
         System.out.println("The area of this triangle is: " + df.format(tri.getArea()));
         System.out.println("The perimeter of this triangle is: " + df.format(tri.getPerimeter()));
@@ -84,8 +83,6 @@ public class UserInput {
         double b = reader.nextDouble();
         
         Rectangle rect = new Rectangle(h, b);
-        DecimalFormat df = new DecimalFormat("#.##");
-
         
         System.out.println("The area of this rectangle is: " + df.format(rect.getArea()));
         System.out.println("The perimeter of this rectangle is: " + df.format(rect.getPerimeter()));
@@ -96,7 +93,6 @@ public class UserInput {
         double h = reader.nextDouble();
         
         Circle crcl = new Circle(h);
-        DecimalFormat df = new DecimalFormat("#.##");
 
         System.out.println("The area of this circle is: " + df.format(crcl.getArea()));
         System.out.println("The circumference of this circle is: " + df.format(crcl.getPerimeter()));
@@ -115,8 +111,6 @@ public class UserInput {
         double sl2 = reader.nextDouble();
         
         Trapezoid trap = new Trapezoid(h, b, b2, sl, sl2);
-        DecimalFormat df = new DecimalFormat("#.##");
-
         
         System.out.println("The area of this trapezoid is: " + df.format(trap.getArea()));
         System.out.println("The perimeter of this trapezoid is: " + df.format(trap.getPerimeter()));
